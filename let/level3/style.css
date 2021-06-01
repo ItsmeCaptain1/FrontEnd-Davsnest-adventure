@@ -1,0 +1,7 @@
+#flag {
+  width: 500px;
+  height: 100px;
+  background-color: white;
+  border-top: 100px solid orange;
+  border-bottom: 100px solid green;
+}
