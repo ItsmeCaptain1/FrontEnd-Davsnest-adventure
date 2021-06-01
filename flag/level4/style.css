@@ -1,0 +1,11 @@
+#line1 {
+  height: 100px;
+  width: 500px;
+  border-bottom: 100px solid white;
+  background-color: orange;
+}
+#line2 {
+  height: 100px;
+  width: 500px;
+  background-color: green;
+}

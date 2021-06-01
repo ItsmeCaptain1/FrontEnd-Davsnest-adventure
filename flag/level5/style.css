@@ -1,0 +1,11 @@
+hr:nth-child(1) {
+  height: 100px;
+  width: 500px;
+  border-bottom: 100px solid white;
+  background-color: orange;
+}
+hr:nth-child(2) {
+  height: 100px;
+  width: 500px;
+  background-color: green;
+}
