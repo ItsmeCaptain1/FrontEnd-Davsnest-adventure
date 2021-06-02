@@ -1,0 +1,17 @@
+body {
+  background-color: lightyellow;
+}
+sup {
+  color: green;
+}
+sub {
+  color: red;
+}
+u {
+  color: red;
+}
+h1 {
+  font-size: 100px;
+  font-family: cursive;
+  background-color: green;
+}
