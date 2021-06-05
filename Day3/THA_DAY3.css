@@ -1,0 +1,26 @@
+fieldset {
+  border: 2px solid rgb(11, 115, 150);
+}
+legend {
+  text-align: center;
+  width: 300px;
+  color: rgb(29, 100, 148);
+  margin: auto 100px;
+  font-family: "Libre Baskerville", serif;
+}
+#l1 {
+  font-size: 30px;
+}
+#l2 {
+  text-align: center;
+}
+.row-content {
+  color: rgb(42, 101, 141);
+}
+.part1 {
+  border-right: 2px solid rgb(42, 101, 141);
+  padding: 20px 25px;
+}
+.part1 {
+  padding: 40px 25px;
+}
