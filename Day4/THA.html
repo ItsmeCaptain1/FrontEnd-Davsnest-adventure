@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Setting Border inside DIV Element</title>
+    <style>
+      .box {
+        width: 500px;
+        height: 500px;
+        background: rgba(255, 251, 251, 0.3);
+        margin: 100px 400px;
+      }
+      .circle {
+        border-radius: 50%;
+      }
+      .inner-border {
+        border: 5px solid rgb(175, 166, 166);
+        box-shadow: inset 0px 0px 0px 50px red;
+        box-sizing: border-box; /* Include padding and border in element's width and height */
+      }
+      .stick {
+        position: absolute;
+        width: 10px;
+        height: 180px;
+        top: 350px;
+        left: 650px;
+        background: black;
+      }
+      .s1 {
+        transform: rotate(30deg);
+        transform-origin: top center;
+      }
+      .s2 {
+        transform: rotate(120deg);
+        transform-origin: top center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box circle inner-border">
+      <div class="stick s1"></div>
+      <div class="stick s2"></div>
+      <div class="stick s3"></div>
+    </div>
+  </body>
+</html>
