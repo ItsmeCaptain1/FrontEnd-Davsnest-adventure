@@ -5,10 +5,19 @@
     <title>Setting Border inside DIV Element</title>
     <style>
       .box {
+        position: absolute;
         width: 500px;
         height: 500px;
-        background: rgba(255, 251, 251, 0.3);
-        margin: 100px 400px;
+        top: 100px;
+        left: 400px;
+      }
+      .box1 {
+        box-shadow: inset 0px 0px 5px 5px gray;
+        position: relative;
+        top: 51px;
+        left: 51px;
+        width: 398px;
+        height: 398px;
       }
       .circle {
         border-radius: 50%;
@@ -16,31 +25,37 @@
       .inner-border {
         border: 5px solid rgb(175, 166, 166);
         box-shadow: inset 0px 0px 0px 50px red;
-        box-sizing: border-box; /* Include padding and border in element's width and height */
       }
       .stick {
         position: absolute;
+        margin: 199px 199px;
         width: 10px;
         height: 180px;
-        top: 350px;
-        left: 650px;
         background: black;
       }
       .s1 {
+        background-color: yellow;
         transform: rotate(30deg);
         transform-origin: top center;
       }
       .s2 {
+        background-color: blueviolet;
         transform: rotate(120deg);
+        transform-origin: top center;
+      }
+      .s3 {
+        transform: rotate(-45deg);
         transform-origin: top center;
       }
     </style>
   </head>
   <body>
     <div class="box circle inner-border">
-      <div class="stick s1"></div>
-      <div class="stick s2"></div>
-      <div class="stick s3"></div>
+      <div class="box1 circle">
+        <div class="stick s1"></div>
+        <div class="stick s2"></div>
+        <div class="stick s3"></div>
+      </div>
     </div>
   </body>
 </html>
