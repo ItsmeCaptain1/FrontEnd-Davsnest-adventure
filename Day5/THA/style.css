@@ -1,0 +1,108 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
+}
+.container {
+  height: 800px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(https://html.sammy-codes.com/images/background.jpg);
+}
+
+#calculator {
+  height: 600px;
+  top: 75px;
+  position: relative;
+  border-radius: 5px;
+  background-color: #eaedef;
+  box-shadow: 0 4px 8px 0 rgba(10, 44, 59, 0.4),
+    0 6px 20px 0 rgba(70, 33, 43, 0.25);
+}
+
+#result {
+  height: 160px;
+}
+#history {
+  text-align: right;
+  height: 30px;
+  margin: 0 30px;
+  padding-top: 30px;
+  font-size: 20px;
+  color: #919191;
+}
+#output {
+  text-align: right;
+  height: 80px;
+  margin: 25px 30px;
+  font-size: 40px;
+}
+
+#keyboard {
+  height: 540px;
+}
+
+.operator,
+.number,
+.empty {
+  width: 60px;
+  height: 60px;
+  margin: 14px 21px;
+  float: left;
+  border-radius: 50%;
+  border-width: 0;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.number,
+.empty {
+  background-color: #eaedef;
+}
+
+.number,
+.operator {
+  cursor: pointer;
+}
+
+.operator:active,
+.number:active {
+  font-size: 14px;
+}
+
+.operator:focus,
+.number:focus,
+.empty:focus {
+  outline: 0;
+}
+button:nth-child(1) {
+  font-size: 23px;
+  background-color: rgb(199, 199, 199);
+}
+button:nth-child(2) {
+  font-size: 23px;
+  background-color: rgb(199, 199, 199);
+}
+button:nth-child(3) {
+  font-size: 23px;
+  background-color: rgb(199, 199, 199);
+}
+button:nth-child(4) {
+  font-size: 23px;
+  background-color: rgb(136, 125, 26);
+}
+
+button:nth-child(8) {
+  font-size: 23px;
+  background-color: rgb(52, 228, 160);
+}
+button:nth-child(12) {
+  font-size: 23px;
+  background-color: rgb(218, 63, 197);
+}
+button:nth-child(16) {
+  font-size: 23px;
+  background-color: rgb(230, 70, 70);
+}
+button:nth-child(20) {
+  font-size: 23px;
+  background-color: rgb(67, 230, 230);
+}
