@@ -1,64 +1,58 @@
-const cards = document.querySelectorAll(".card-inner");
-const matchedCardsElement = document.querySelector(".matchedCards");
-const remainingCardsElement = document.querySelector(".remainingCards");
-let counter = document.querySelector(".moves");
+var myList = document.getElementsByTagName("li");
 
-var numberOfRemainingCards = cards.length;
-var numberOfMatchedCards = 0;
-var numberOfcurrentlyFlipedCards = 0;
-var moves = 0;
-var classOfCard1, classOfcard2;
-
-function shuffle(array) {
-  var currentIndex = array.length,
-    temporaryValue,
-    randomIndex;
-
-  while (currentIndex !== 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-
-  return array;
+var i = 0;
+for (i = 0; i < myList.length; i++) {
+  var span = document.createElement("span");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myList[i].appendChild(span);
 }
 
-document.body.onload = startgame();
-
-function startgame() {
-  init();
-  cards = shuffle(cards);
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function () {
+    var div = this.parentElement;
+    div.style.display = "none";
+  };
 }
 
-[...cards].forEach(function (card) {
-  card.addEventListener("click", () => {
-    if (numberOfcurrentlyFlipedCards == 0) {
-      card.classList.add("card-flip");
-      classOfCard1;
-      numberOfcurrentlyFlipedCards++;
-      moves++;
-    } else if (numberOfcurrentlyFlipedCards == 1) {
-      if (!card.classList.contains("card-flip")) {
-        card.classList.add("card-flip");
-        classOfcard2 = card.className;
-        numberOfcurrentlyFlipedCards++;
-        moves++;
-      }
-    } else {
-      var currentlyFlipedCards = document.querySelectorAll(".card-flip");
-      [...currentlyFlipedCards].forEach(function (cc) {
-        cc.classList.remove("card-flip");
-      });
-      numberOfcurrentlyFlipedCards = 0;
+var list = document.querySelector("ul");
+list.addEventListener(
+  "click",
+  function (ev) {
+    if (ev.target.tagName === "LI") {
+      ev.target.classList.toggle("checked");
     }
-    init();
-  });
-});
+  },
+  false
+);
 
-function init() {
-  counter.textContent = moves;
-  matchedCardsElement.textContent = numberOfMatchedCards;
-  remainingCardsElement.textContent = numberOfRemainingCards;
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+
+  li.appendChild(t);
+  console.log("dfafd");
+  if (inputValue === "") {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myList").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
 }
