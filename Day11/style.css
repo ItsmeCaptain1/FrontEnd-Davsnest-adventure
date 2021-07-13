@@ -1,0 +1,60 @@
+body {
+  background: url(images.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.quiz {
+  margin: 20px 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  margin: auto 50px;
+  background-color: white;
+}
+.quiz .buttonB {
+  margin-left: 145px;
+}
+.quiz .buttonC {
+  margin-left: 10px;
+}
+.quiz .buttonD {
+  margin-left: 127px;
+}
+button:hover {
+  background-color: lightblue;
+}
+.options {
+  font-weight: bold;
+}
+.alignment {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
+#pre,
+#next {
+  background-color: grey;
+  font-weight: bold;
+}
+#pre:hover,
+#next:hover {
+  opacity: 0.8;
+}
+.right {
+  background-color: green;
+}
+.wrong {
+  background-color: red;
+}
