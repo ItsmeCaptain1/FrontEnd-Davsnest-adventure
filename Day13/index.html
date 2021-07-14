@@ -1,101 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Web API</title>
   </head>
   <body>
     <div class="container">
-      <div class="score row">
-        <div class="col">
-          <h2>
-            Moves :
-            <span class="moves"></span>
-          </h2>
-          <h2>
-            Remaining Cards :
-            <span class="remainingCards"></span>
-          </h2>
-          <h2>
-            Matched Cards :
-            <span class="matchedCards"></span>
-          </h2>
-        </div>
-      </div>
-      <div class="row row-content background">
-        <div class="col">
-          <div class="cards">
-            <div class="card">
-              <div class="card-inner" type="luffy">
-                <div class="card-front">One Piece</div>
-                <div class="card-back">Luffy</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-inner" type="luffy">
-                <div class="card-front">One Piece</div>
-                <div class="card-back">Luffy</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="luffy card-inner">
-                <div class="card-front">One Piece</div>
-                <div class="card-back">Luffy</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-front">One Piece</div>
-                <div class="card-back">Luffy</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-front">One Piece</div>
-                <div class="card-back">Luffy</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-front">One Piece</div>
-                <div class="card-back">Luffy</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-front">One Piece</div>
-                <div class="card-back">Luffy</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-front">One Piece</div>
-                <div class="card-back">Luffy</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-front">One Piece</div>
-                <div class="card-back">Luffy</div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-inner">
-                <div class="card-front">One Piece</div>
-                <div class="card-back">Luffy</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <label for="platform">Platform Name : </label>
+      <input type="text" name="platform" id="platform" />
+      <label for="name">Handle Name : </label>
+      <input type="text" name="name" id="name" />
+      <button onclick="getData()">Submit</button>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="THA.js"></script>
+    <div id="res1"></div>
+    <div id="res2"></div>
+    <script src="script.js"></script>
   </body>
 </html>

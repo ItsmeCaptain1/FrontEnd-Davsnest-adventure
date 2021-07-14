@@ -1,37 +1,29 @@
-// function sum1(a, b) {
-//   // console.log(a+b) ;
-//   return a + b;
-// }
+function getData() {
+  var platform = document.getElementById("platform").value;
+  var inp = document.getElementById("name").value;
+  var res1 = document.getElementById("res1");
+  var res2 = document.getElementById("res2");
+  var temp =
+    "https://competitive-coding-api.herokuapp.com/api/" + platform + "/" + inp;
+  //   console.log(typeof platform);
 
-// const sum2 = function sumOfTwoNumber(a, b) {
-//   return a + b;
-// };
-
-// const sum3 = () => console.log("I am arrow function");
-// const sum4 = (a, b) => console.log("I am arrow function", a + b);
-
-// const sum5 = (a) => console.log("I am also arrow function", a);
-
-// console.log(sum1(1, 3));
-// console.log(sum2(9, 2));
-
-// console.log(sum3());
-// console.log(sum4(9, 2));
-// console.log(sum5(1));
-
-// -------------------------- Call Back -----------------------
-// function outer(a, callback) {
-//   var b = callback();
-//   return a + b;
-// }
-function inner() {
-  const b = 10;
-  console.log(b);
+  fetch(temp)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      if (data.status == "Failed") {
+        res1.textContent = "Invalid Data";
+        res2.textContent = "";
+      } else {
+        // console.log(data);
+        if (platform.toLowerCase() === "codeforces") {
+          res1.textContent = "Highest Rank" + " = " + data["max rank"];
+          res2.textContent = "Highest Rating" + " = " + data["max rating"];
+        }
+        if (platform.toLowerCase() === "codechef") {
+          res1.textContent = "Star" + " = " + data["stars"];
+          res2.textContent = "Highest Rating" + " = " + data["highest_rating"];
+        }
+      }
+    });
 }
-// console.log(outer(59, inner));
-
-// ----------------------- setTimeout -----------------
-// setTimeout(() => {
-//   inner();
-// }, 3000);
-// setTimeout(inner,3000) ;
